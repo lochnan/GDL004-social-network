@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <script type="module" src="index.js"></script>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Social Network</title>
+  </head>
+
+  <body>
+    <div id="general">
+      <div id="logo">
+        <img id="" src="img/prueba.png">
+        <img id="logo" src="img/logo.png">
+        <p>¡Bienvenidx!</p>
+      </div>
+
+      <div id="singIn">
+        <p>¿No tienes cuenta?</p>
+        <a href="singUp">Regístrate</a>
+        <p>O ingresa con...</p>
+        <a href="#"><img src="img/loginFacebook.png"></a>
+        <a href="#"><img src="img/loginGoogle.png"></a>
+        <input type="email" id="email" placeholder="Correo">
+        <input type="password" id="password" placeholder="Password">
+        <input type="submit" id="submit" value="Log in">
+      </div>
+    </div>
+
+    <div id="singUp">
+        <input type="text" id="name" placeholder="Seudónimo">
+        <input type="email" id="email" placeholder="Correo">
+        <input type="password" id="password" placeholder="Password">
+        <input type="submit" id="submit" value="Log in">
+    </div>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
 <script src="/__/firebase/7.6.2/firebase-app.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
@@ -17,5 +45,8 @@
 
 <!-- Initialize Firebase -->
 <script src="/__/firebase/init.js"></script>
-</body>
+
+    <script type="module" src="index.js"></script>
+  </body>
+
 </html>
