@@ -1,5 +1,9 @@
 {
   "projects": {
+<<<<<<< HEAD
     "default": "redsocial-7b5f0"
+=======
+    "default": "red-social-for-depression"
+>>>>>>> a46f28f597b00229c4adf261cef7a6dd8707716b
   }
 }
