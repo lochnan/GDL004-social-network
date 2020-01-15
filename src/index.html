@@ -19,23 +19,38 @@
 
   <body>
     <div id="general">
-      <div id="logo">
-        <img id="" src="img/prueba.png">
-        <img id="logo" src="img/logo.png">
-        <p>¡Bienvenidx!</p>
-      </div>
+      <div id="logo"></div>
+       <p>¡Bienvenidx!</p>
+    </div>
 
-      <div id="singIn">
-        <p>¿No tienes cuenta?</p>
-        <a href="singUp">Regístrate</a>
-        <p>O ingresa con...</p>
-        <a href="#"><img src="img/loginFacebook.png"></a>
-        <a href="#"><img src="img/loginGoogle.png"></a>
-
-        <input type="email" id="email" placeholder="Coloca tu email">
-        <input type="password" id="passwordEmail" placeholder="Coloca tu Password">
-        <button id="submitSIE">Log In dos</button>
+<!--LOGIN-->
+  <div id="Login">
+    <h1>Acceso</h1>
+    <!---Boton de FB-->
+    <div id="FB"><a href="#"><img src="img/loginFacebook.png"></a></div>
+    <!---Botón de Gmail-->
+    <div id="Gmail"><a href="#"><img src="img/loginGoogle.png"></a></div>
+    <!---Área de acceso o login con email-->
+    <div id="loginEmail">
+      <input type="email" id="emailL" placeholder="email">
+      <input type="password" id="passwordL" placeholder="paswword">
+      <button id="submitL">Log In</button>
       </div>
+  </div>
+
+<!---Registro con correo si no tienes cuenta-->
+  <div id="singUp">
+    <p>¿No tienes cuenta?</p>
+    <a href="singUpEmail">Regístrate</a>
+  </div>
+
+<!--MODAL DE REGISTRO O SIGNUP-->
+<div id="sigUpEmail">
+  <h1>Área de registro</h1>
+          <input type="email" id="email" placeholder="Coloca tu email">
+          <input type="password" id="passwordEmail" placeholder="Coloca tu Password">
+          <button id="submitSIE">Registro</button>
+          <h1 id="login"></h1>
     </div>
 
     <div id="singIn">
