@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Social Network</title>
+      <!---FIREBASE-->
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>    
+      <!--- To add products that we're using: authentification and firestore in this case-->
+      <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script> 
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+          https://firebase.google.com/docs/web/setup#available-libraries -->
+          <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+
+    <title>Chocolate</title>
   </head>
 
   <body>
@@ -21,36 +31,24 @@
         <p>O ingresa con...</p>
         <a href="#"><img src="img/loginFacebook.png"></a>
         <a href="#"><img src="img/loginGoogle.png"></a>
-        <input type="email" id="email" placeholder="Correo">
-        <input type="password" id="password" placeholder="Password">
-        <input type="submit" id="submit" value="Log in">
+
+        <input type="email" id="email" placeholder="Coloca tu email">
+        <input type="password" id="passwordEmail" placeholder="Coloca tu Password">
+        <button id="submitSIE">Log In dos</button>
       </div>
     </div>
 
     <div id="singUp">
         <input type="text" id="name" placeholder="Seudónimo">
-        <input type="email" id="email" placeholder="Correo">
+        <input type="email" id="email2" placeholder="Correo">
         <input type="password" id="password" placeholder="Password">
-        <input type="submit" id="submit" value="Log in">
+      
     </div>
-    
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/7.6.2/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/7.6.2/firebase-analytics.js"></script>
 
 <!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
-
-
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
-
-<script src= "/firebase.js"></script>
-
-    <script type="module" src="index.js"></script>
+<script src="/src/firebase.js"></script>
+<!---END FIREBASE-->
+  <script type="module" src="index.js"></script>
   </body>
 
 </html>
