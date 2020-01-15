@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" type="text/css" href="/src/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -41,17 +42,20 @@
 <!---Registro con correo si no tienes cuenta-->
   <div id="singUp">
     <p>¿No tienes cuenta?</p>
-    <a href="singUpEmail">Regístrate</a>
+    <div id="openModal"><button>Regístrate</button></div> <!--Open the modal-->
   </div>
 
-<!--MODAL DE REGISTRO O SIGNUP-->
-<div id="sigUpEmail">
-  <h1>Área de registro</h1>
-          <input type="email" id="email" placeholder="Coloca tu email">
-          <input type="password" id="passwordEmail" placeholder="Coloca tu Password">
-          <button id="submitSIE">Registro</button>
-          <h1 id="login"></h1>
-    </div>
+<!--MODAL-->
+<div id="mymodal" class="modal">
+  <!-- CONTENIDO DEL MODAL DE REGISTRO O SIGNUP-->
+  <div id="contSigUpEmail" class="modal-content">
+    <h1>Área de registro</h1>
+      <input type="email" id="email" placeholder="Coloca tu email">
+      <input type="password" id="passwordEmail" placeholder="Coloca tu Password">
+      <button id="submitSIE" class="close">Registro</button> <!--O signUp-->
+      <h1 id="login"></h1>
+  </div>
+</div>
 
 
 <!-- Initialize Firebase -->
