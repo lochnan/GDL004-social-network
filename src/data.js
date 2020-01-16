@@ -1,3 +1,4 @@
+
 // FUNCTION that 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -29,6 +30,7 @@ export function toSignUp () {
     //alert("Te equivocaste");
     console.trace(error);
     });
+  
   // When the user clicks on the button, close de modal and returns to the Login page
    document.getElementById('mymodal').style.display = "none";
    document.getElementById('signUp').style.display = "none";
@@ -36,13 +38,23 @@ export function toSignUp () {
 
 // FUNCTION that makes login onces de user has already signup with the email.
 export function logIn () {
-  let emailL =  document.getElementById('emailL').value;
-  let passwordL = document.getElementById('passwordL').value;
+  const emailL = document.getElementById('emailL').value;
+  const passwordL = document.getElementById('passwordL').value;
 
-  firebase.auth().signInWithEmailAndPassword(emailL, passwordL).catch(function(error) {
-    var errorCode = error.code;
-    var errorMessage = error.message;
+  firebase.auth().signInWithEmailAndPassword(emailL, passwordL).catch((error) => {
+    let errorCode = error.code;
+    let errorMessage = error.message;
     alert(errorMessage);
   });
+}
 
+export function toSignOut() {
+  const out = document.getElementById('singOut').value;
+
+
+  firebase.auth().signOut().then(() => {
+    // Sign-out successful.
+  }, (error) => {
+    // An error happened.
+  });
 }
