@@ -1,7 +1,4 @@
-export const example = () => {
-    // aquí tu código
-}
-
+// FUNCTION that 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
@@ -12,29 +9,32 @@ firebase.auth().onAuthStateChanged(function(user) {
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
     var providerData = user.providerData;
-    document.getElementById("login").innerHTML= "¡Te has logueado!" + user.email;
+    document.getElementById("prueba").innerHTML= "Puedes iniciar sesión";
   
   } else {
-    document.getElementById("login").innerHTML= "¡No has podido ingresar!";
+    document.getElementById("prueba").innerHTML= " ";
     // User is signed out.
-  
   }
 });
-// Function that triggers with the SignUp button with the Firestore Auth
+
+// FUNCTION that triggers with the SignUp button with the Firestore Auth but also closes de modal
 export function toSignUp () {
-    let email =  document.getElementById('email').value;
+  let email =  document.getElementById('email').value;
     let passwordEmail = document.getElementById('passwordEmail').value;
 
-    firebase.auth().createUserWithEmailAndPassword(email, passwordEmail).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      //alert("Te equivocaste");
-      console.trace(error);
-      // ...
+  firebase.auth().createUserWithEmailAndPassword(email, passwordEmail).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    //alert("Te equivocaste");
+    console.trace(error);
     });
+  // When the user clicks on the button, close de modal and returns to the Login page
+   document.getElementById('mymodal').style.display = "none";
+   document.getElementById('signUp').style.display = "none";
   }
 
+// FUNCTION that makes login onces de user has already signup with the email.
 export function logIn () {
   let emailL =  document.getElementById('emailL').value;
   let passwordL = document.getElementById('passwordL').value;

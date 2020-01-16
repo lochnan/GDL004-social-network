@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="/src/styles.css">
+    <link rel="stylesheet" type="text/css" media='screen' href="/src/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -33,6 +33,7 @@
     <div id="Gmail"><a href="#"><img src="img/loginGoogle.png"></a></div>
     <!---Área de acceso o login con email-->
     <div id="loginEmail">
+      <div id = "prueba"></div>
       <input type="email" id="emailL" placeholder="email">
       <input type="password" id="passwordL" placeholder="paswword">
       <button id="submitL">Log In</button>
@@ -40,7 +41,7 @@
   </div>
 
 <!---Registro con correo si no tienes cuenta-->
-  <div id="singUp">
+  <div id="signUp">
     <p>¿No tienes cuenta?</p>
     <div id="openModal"><button>Regístrate</button></div> <!--Open the modal-->
   </div>
@@ -60,6 +61,7 @@
 
 <!-- Initialize Firebase -->
 <script src="/src/firebase.js"></script>
+
 <!---END FIREBASE-->
   <script type="module" src="index.js"></script>
   </body>
