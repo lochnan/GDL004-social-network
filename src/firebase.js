@@ -1,5 +1,5 @@
 // Your web app's Firebase configuration
-  var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyAGDBJElCRjCwlhMBV4lWpEfauBRX7rNKU",
     authDomain: "red-social-for-depression.firebaseapp.com",
     databaseURL: "https://red-social-for-depression.firebaseio.com",
@@ -13,9 +13,5 @@
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
 
+
   
-
-  firebase.analytics();
-
-
-

@@ -10,9 +10,6 @@
       <!--- To add products that we're using: authentification and firestore in this case-->
       <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
       <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script> 
-      <!-- TODO: Add SDKs for Firebase products that you want to use
-          https://firebase.google.com/docs/web/setup#available-libraries -->
-          <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
 
     <title>Chocolate</title>
   </head>
@@ -27,9 +24,9 @@
   <div id="Login">
     <h1>Acceso</h1>
     <!---Boton de FB-->
-    <div id="FB"><a href="#"><img src="img/loginFacebook.png"></a></div>
+    <div id="FB"><img src="img/loginFacebook.png"></div>
     <!---Botón de Gmail-->
-    <div id="Gmail"><a href="#"><img src="img/loginGoogle.png"></a></div>
+    <div id="Gmail"><img src="img/loginGoogle.png"></div>
     <!---Área de acceso o login con email-->
     <div id="loginEmail">
       <input type="email" id="emailL" placeholder="email">
@@ -50,6 +47,7 @@
           <input type="email" id="email" placeholder="Coloca tu email">
           <input type="password" id="passwordEmail" placeholder="Coloca tu Password">
           <button id="submitSIE">Registro</button>
+          <button id="singOut">Cerrar sesion</button>
           <h1 id="login"></h1>
     </div>
 
@@ -65,6 +63,7 @@
 <script src="/src/firebase.js"></script>
 <!---END FIREBASE-->
   <script type="module" src="index.js"></script>
+  
   </body>
 
 </html>
