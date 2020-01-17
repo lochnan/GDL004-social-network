@@ -74,7 +74,7 @@ A continuación te proporcionamos el layout (diseño) de la vista mobile y deskt
 
 En los proyectos anteriores solo has consumido (leído) datos, por ejemplo, a través de un archivo `json` o utilizando `fetch`.
 
-En este proyecto diseñarás la estructura de esos datos, la forma de consultarlos, actualizarlos, modificarlos y eliminarlos según los requerimiento del usuario. Para llevarlo a cabo utilizaras `Firestore` de `Firebase` o `LocalStogarge` una `Web Storage API`
+En este proyecto diseñarás la estructura de esos datos, la forma de consultarlos, actualizarlos, modificarlos y eliminarlos según los requerimiento del usuario. Para lleletlo a cabo utilizaras `Firestore` de `Firebase` o `LocalStogarge` una `Web Storage API`
 
 #### Firebase
 
@@ -108,7 +108,7 @@ El objetivo de usar Firestore en este proyecto, es que aprendes a manejar y pers
 
 * Como usuario loggeado debo poder ver todos los posts públicos y privados que he creado hasta ese momento, desde el más reciente hasta el más antiguo, así como la opción de poder cambiar la configuración de privacidad de mis post.
 
-* Yo como usuario loggeado, puedo dar like y llevar un conteo de likes en mi publicación así como poder escribir, guardar, editar o eliminar un comentario en mi publicación.
+* Yo como usuario loggeado, puedo dar like y llelet un conteo de likes en mi publicación así como poder escribir, guardar, editar o eliminar un comentario en mi publicación.
 
 * Al final debo poder ingresar a la red social y poder visualizar los datos de mi perfil creado o editarlos.
 
@@ -219,14 +219,14 @@ pantalla y entorno móvil.
 
 En proyectos anteriores nuestras aplicaciones habían estado compuestas de una
 sola _vista_ principal (una sóla _página_). En este proyecto se introduce la
-necesidad de tener que dividir nuestra interfaz en varias _vistas_ o _páginas_
+necesidad de tener que dividir nuestra interfaz en letias _vistas_ o _páginas_
 y ofrecer una manera de navegar entre ellas.
 
 ### Escritura de datos
 
 En los proyectos anteriores hemos consumido (leído) datos, pero todavía no
-habíamos escrito datos (salvar cambios, crear datos, borrar, ...). En este
-proyecto tendrás que crear (salvar) nuevos datos, así como leer, actualizar y
+habíamos escrito datos (sallet cambios, crear datos, borrar, ...). En este
+proyecto tendrás que crear (sallet) nuevos datos, así como leer, actualizar y
 modificar datos existentes. Estos datos se podrán guardar de forma remota
 usando [Firestore](https://firebase.google.com/docs/firestore) o de forma
 local utilizando`localStorage`.

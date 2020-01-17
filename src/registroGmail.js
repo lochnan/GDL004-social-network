@@ -10,9 +10,9 @@ function logGmail() {
       // Step 2.
       // User's email already exists.
       // The pending Google credential.
-    var pendingCred = error.credential;
+    let pendingCred = error.credential;
       // The provider account's email address.
-      var email = error.email;
+      let email = error.email;
       // Get sign-in methods for this email.
       auth.fetchSignInMethodsForEmail(email).then((methods) => {
         // Step 3.
@@ -21,7 +21,7 @@ function logGmail() {
         if (methods[0] === 'password') {
           // Asks the user their password.
           // In real scenario, you should handle this asynchronously.
-          var password = promptUserForPassword(); // TODO: implement promptUserForPassword.
+          let password = promptUserForPassword(); // TODO: implement promptUserForPassword.
           auth.signInWithEmailAndPassword(email, password).then((user) => {
             // Step 4a.
             return user.linkWithCredential(pendingCred);
@@ -34,7 +34,7 @@ function logGmail() {
         // All the other cases are external providers.
         // Construct provider object for that provider.
         // TODO: implement getProviderForProviderId.
-        var provider = getProviderForProviderId(methods[0]);
+        let provider = getProviderForProviderId(methods[0]);
         // At this point, you should let the user know that they already has an account
         // but with a different provider, and let them validate the fact they want to
         // sign in with this provider.
@@ -60,23 +60,23 @@ function logGmail() {
 export const loginGmail = logGmail;
 
 // REGISTRO FACEBOOK
-var provider = new firebase.auth.FacebookAuthProvider();
+let provider = new firebase.auth.FacebookAuthProvider();
 
   function loginFB() {
         firebase.auth().signInWithPopup(provider).then(function(result) {
           // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-          var token = result.credential.accessToken;
+          let token = result.credential.accessToken;
           // The signed-in user info.
-          var user = result.user;
+          let user = result.user;
           // ...
         }).catch((error) => {
           // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
+          let errorCode = error.code;
+          let errorMessage = error.message;
           // The email of the user's account used.
-          var email = error.email;
+          let email = error.email;
           // The firebase.auth.AuthCredential type that was used.
-          var credential = error.credential;
+          let credential = error.credential;
           // ...
         });
   }

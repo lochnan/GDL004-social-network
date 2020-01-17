@@ -1,17 +1,18 @@
 
-// FUNCTION that 
+// FUNCTION that calls Firebase 
 firebase.auth().onAuthStateChanged(function(user) {
+  console.log(user);
   if (user) {
     // User is signed in.
-    var displayName = user.displayName;
-    var email = user.email;
-    var emailVerified = user.emailVerified;
-    var photoURL = user.photoURL;
-    var isAnonymous = user.isAnonymous;
-    var uid = user.uid;
-    var providerData = user.providerData;
+    let displayName = user.displayName;
+    let email = user.email;
+    let emailVerified = user.emailVerified;
+    let photoURL = user.photoURL;
+    let isAnonymous = user.isAnonymous;
+    let uid = user.uid;
+    let providerData = user.providerData;
     document.getElementById("prueba").innerHTML= "Puedes iniciar sesión";
-  
+    
   } else {
     document.getElementById("prueba").innerHTML= " ";
     // User is signed out.
@@ -23,23 +24,30 @@ export function toSignUp () {
   let email =  document.getElementById('email').value;
     let passwordEmail = document.getElementById('passwordEmail').value;
 
+    console.log(email, passwordEmail);
+
   firebase.auth().createUserWithEmailAndPassword(email, passwordEmail).catch(function(error) {
     // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
+    let errorCode = error.code;
+    let errorMessage = error.message;
     //alert("Te equivocaste");
     console.trace(error);
+    alert(error.message);
     });
   
   // When the user clicks on the button, close de modal and returns to the Login page
-   document.getElementById('mymodal').style.display = "none";
-   document.getElementById('signUp').style.display = "none";
+  document.getElementById('mymodal').style.display = "none";
+  document.getElementById('signUp').style.display = "none";
   }
+// IGNOREN ESTO ATTE. NANCY import hola kfkfes.js
 
-// FUNCTION that makes login onces de user has already signup with the email.
+// FUNCTION that makes login once the user has already signup with the email.
 export function logIn () {
   const emailL = document.getElementById('emailL').value;
   const passwordL = document.getElementById('passwordL').value;
+
+ // IGNOREN ESTO ATTE. NANCY hola (emailL, passwordL); 
+// IGNOREN ESTO ATTE. NANCY export function hola (emailL, passwordL) {firebase.auth().signInWithEmailAndPassword(emailL, passwordL).then(function(){
 
   firebase.auth().signInWithEmailAndPassword(emailL, passwordL).catch((error) => {
     let errorCode = error.code;
@@ -49,9 +57,6 @@ export function logIn () {
 }
 
 export function toSignOut() {
-  const out = document.getElementById('singOut').value;
-
-
   firebase.auth().signOut().then(() => {
     // Sign-out successful.
   }, (error) => {

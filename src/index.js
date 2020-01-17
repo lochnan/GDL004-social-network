@@ -1,5 +1,4 @@
-import { toSignUp, toSignOut } from './data.js';
-import { logIn } from './logIn.js';
+import { toSignUp, toSignOut, logIn } from './data.js';
 import { loginGmail, logFacebook } from './registroGmail.js';
 
 document.getElementById('submitSIE').addEventListener('click', toSignUp);
@@ -21,14 +20,7 @@ window.onclick = function(event) {
     }
 }
 */
-
-
 document.getElementById('submitL').addEventListener('click', logIn);
-
 document.getElementById('Gmail').addEventListener('click', loginGmail);
-
 document.getElementById('singOut').addEventListener('click', toSignOut);
-
 document.getElementById('FB').addEventListener('click',logFacebook);
-
-

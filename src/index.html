@@ -19,7 +19,7 @@
   <body>
     <div id="general">
       <div id="logo"></div>
-       <p>¡Bienvenidx!</p>
+       <p>¡Bienvenidos!</p>
     </div>
 
 <!--LOGIN-->
@@ -30,40 +30,37 @@
     <!---Botón de Gmail-->
     <div id="Gmail"><img src="img/loginGoogle.png"></div>
     <!---Área de acceso o login con email-->
-    <div id="loginEmail">
-      <div id = "prueba"></div>
-      <input type="email" id="emailL" placeholder="email">
-      <input type="password" id="passwordL" placeholder="paswword">
-      <button id="submitL">Log In</button>
+  
+      <div id="loginEmail">
+        <div id = "prueba"></div>
+        <input type="email" id="emailL" placeholder="email">
+        <input type="password" id="passwordL" placeholder="paswword">
+        <button id="submitL">Log In</button>
+        <button id="singOut">Cerrar sesion</button>  
       </div>
+
   </div>
 
 <!---Registro con correo si no tienes cuenta-->
   <div id="signUp">
     <p>¿No tienes cuenta?</p>
-    <div id="openModal"><button>Regístrate</button></div> <!--Open the modal-->
+      <div id="openModal"><button>Regístrate</button></div> <!--Open the modal-->
   </div>
-
 
 <!--MODAL-->
 <div id="mymodal" class="modal">
+  
   <!-- CONTENIDO DEL MODAL DE REGISTRO O SIGNUP-->
+
   <div id="contSigUpEmail" class="modal-content">
     <h1>Área de registro</h1>
       <input type="email" id="email" placeholder="Coloca tu email">
       <input type="password" id="passwordEmail" placeholder="Coloca tu Password">
       <button id="submitSIE" class="close">Registro</button> <!--O signUp-->
-      <button id="singOut">Cerrar sesion</button>
       <h1 id="login"></h1>
   </div>
-</div>
 
-    <div id="singIn">
-        <input type="text" id="name" placeholder="Seudónimo">
-        <input type="email" id="email2" placeholder="Correo">
-        <input type="password" id="password" placeholder="Password">
-      
-    </div>
+</div>
     
 
 <!-- Initialize Firebase -->
