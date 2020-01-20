@@ -1,6 +1,6 @@
 // FUNCTION that calls Firebase
 firebase.auth().onAuthStateChanged((user) => {
-  console.log(user);
+  //console.log(user);
   if (user) {
     // User is signed in.
     let displayName = user.displayName;
