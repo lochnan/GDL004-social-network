@@ -1,8 +1,9 @@
-import { components, loggeoArguments } from '../views/index.js';
+import { components, loggeoArguments, signUpArguments } from '../views/index.js';
 
 export const controlador = {
   init: () => {
     loggeoArguments.init();
+    signUpArguments.init();
   },
 
   changeView: (hash) => {

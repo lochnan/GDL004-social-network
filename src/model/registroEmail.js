@@ -45,7 +45,6 @@ export const emailFirebase = {
   }
 };
 
-
 /*  ESTA FUNCIÓN CIERRA SESIÓN DE LA APLICACIÓN
 export function toSignOut() {
   firebase.auth().signOut().then(() => {

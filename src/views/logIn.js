@@ -29,16 +29,18 @@ export default () => {
   inputText1.setAttribute('type', 'text');
   inputText1.setAttribute('placeholder', 'Escribre tu correo');
   inputText1.setAttribute('id', 'inputEmail1');
+  inputText1.setAttribute('name', 'inputEmail1');
   // Creando input para REGISTRAR password
   const inputPassword1 = document.createElement('input');
   formSignUp.appendChild(inputPassword1);
   inputPassword1.setAttribute('type', 'password');
   inputPassword1.setAttribute('id', 'inputPassword1');
+  inputPassword1.setAttribute('name', 'inputPassword1');
   inputPassword1.setAttribute('placeholder', 'Escribe tu contraseña');
   // Creando el botón que hará en registro del correo con la función de firebase
   const button1 = document.createElement('input');
   button1.setAttribute('type', 'submit');
-  button1.setAttribute('value', 'Iniciar sesión');
+  button1.setAttribute('value', 'Nuevo Registro');
   formSignUp.appendChild(button1);
 
 
@@ -51,11 +53,13 @@ export default () => {
   formLogIn.appendChild(inputText);
   inputText.setAttribute('type', 'text');
   inputText.setAttribute('placeholder', 'Escribre tu correo');
+  inputText.setAttribute('name', 'inputEmail');
   inputText.setAttribute('id', 'inputEmail');
   // Creando input para password
   const inputPassword = document.createElement('input');
   formLogIn.appendChild(inputPassword);
   inputPassword.setAttribute('type', 'password');
+  inputPassword.setAttribute('name', 'inputPassword');
   inputPassword.setAttribute('id', 'inputPassword');
   inputPassword.setAttribute('placeholder', 'Escribe tu contraseña');
   // Creando el botón que hará el inición se sesión con la función de firebase

@@ -11,6 +11,20 @@ const components = {
   different: Different,
 };
 
+const signUpArguments = {
+  init: () => {
+    const form = document.getElementById('formSignUp');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = form.inputEmail1.value;
+      const password = form.inputPassword1.value;
+
+      emailFirebase.toSignUp(email, password);
+    });
+  },
+};
+
 const loggeoArguments = {
   init: () => {
     const form = document.getElementById('formLogIn');
@@ -23,13 +37,13 @@ const loggeoArguments = {
       };
       form.reset();
 
-      const prueba = emailFirebase.logIn(emailValues.email, emailValues.password);
+      const prueba = emailFirebase.logIn(form.inputEmail.value, form.inputPassword.value);
       console.log(prueba);
     });
   },
 };
 
-export { components, loggeoArguments };
+export { components, loggeoArguments, signUpArguments };
 
 /* frank
   registroEmail.LogIn(form.inputEmail.value, emailValues.password)
