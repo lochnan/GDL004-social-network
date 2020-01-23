@@ -12,16 +12,28 @@
       <!--- To add products that we're using: authentification and firestore in this case-->
       <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
       <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script> 
-
     <title>Chocolate</title>
   </head>
 
   <body>
   <header>
-    <nav>
+  </header>
+  <!--En este  section irá cambinado la vista según el #-->
+  <section id="container"></section> 
+
+<script type="module" src="./main.js"></script>
+  
+<!-- Initialize Firebase -->
+<script src="./model/firebase.js"></script>
+
+  </body>
+</html>
+
+
+<!-- <nav>
       <ul>
         <li>
-          <a href= "#/">Chocolate</a> <!--This is main-->
+          <a href= "#/">Chocolate</a> This is main
         </li>
         <li>
           <a href="#/logIn"> LogIn </a>
@@ -30,20 +42,4 @@
           <a href="#/profile"> Profile </a>
         </li>
       </ul>
-    </nav>
-  </header>
-  <!--En este  section irá cambinado la vista según el #-->
-  <section id="container"></section> 
-
-<script type="module" src="./main.js"></script>
-    <div id="general">
-      <div id="logo"></div>
-       <p>¡Bienvenidos!</p>
-    </div>    
-<!-- Initialize Firebase -->
-<script src="/firebase.js"></script>
-
-<!---END FIREBASE-->
-  <script type="module" src="/index.js"></script>
-  </body>
-</html>
+    </nav>-->

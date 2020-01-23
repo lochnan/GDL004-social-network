@@ -19,4 +19,8 @@
         width: 80%; /* Could be more or less, depending on screen size */
       }
 
+    .color {
+      background-color: antiquewhite;
+      height: 400px;
+    }  
       
