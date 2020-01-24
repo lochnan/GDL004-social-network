@@ -30,9 +30,6 @@ export const emailFirebase = {
       console.trace(error);
       alert(error.message);
     });
-    // When the user clicks on the button, close de modal and returns to the Login page
-    document.getElementById('mymodal').style.display = 'none';
-    document.getElementById('signUp').style.display = 'none';
   },
 
   // FUNCTION that makes login once the user has already signup with the email.

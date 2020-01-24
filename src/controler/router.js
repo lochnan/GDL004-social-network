@@ -13,7 +13,7 @@ export const controlador = {
     switch (hash) {
       case '#/':
       case '#':
-      case '':
+      case '#/logIn':
         container.appendChild(components.logIn());
         controlador.init();
         break;

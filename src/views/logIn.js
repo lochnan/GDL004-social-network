@@ -3,18 +3,23 @@ export default () => {
   divElement.setAttribute('id', 'divElement');
   divElement.setAttribute('class', 'color');
 
+
   // Creando div para la imagen del logo
   const logo = document.createElement('div');
+  logo.setAttribute('class', 'logo');
   const imgLogo = document.createElement('img');
-  imgLogo.setAttribute('src', './img/logochocolate.jpg');
+  imgLogo.setAttribute('src', './views/img/logochocolate.png');
   divElement.appendChild(logo);
   logo.appendChild(imgLogo);
 
   // Creando div para los botones de Google, Facebook
   const bodyLogIn = document.createElement('div');
+  bodyLogIn.setAttribute('class', 'bodyLogIn');
+  const template = `<span> ${'Regístrate en Chocolat'} </span>`;
+  bodyLogIn.innerHTML = template;
   const buttonGoogle = document.createElement('div');
   const buttonG = document.createElement('img');
-  buttonG.setAttribute('src', './img/signInGoogle.png');
+  buttonG.setAttribute('src', './views/img/signInGoogle.png');
   divElement.appendChild(bodyLogIn);
   bodyLogIn.appendChild(buttonGoogle);
   buttonGoogle.appendChild(buttonG);

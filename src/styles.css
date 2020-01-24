@@ -19,8 +19,23 @@
         width: 80%; /* Could be more or less, depending on screen size */
       }
 
-    .color {
-      background-color: antiquewhite;
-      height: 400px;
-    }  
+    #divElement {
+      background-color: rgb(214, 202, 187);
+      width:100%;
+      max-width:800px;
+      height: 900px;
+      max-height:1200px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo img {
+      width:70%;
+    }
+
+    .bodyLogIn img{
+      width:180px;
+    }
+
+
       

@@ -1,9 +1,7 @@
 import Home from './home.js';
 import LogIn from './logIn.js';
 import Different from './page404.js';
-import { controlador } from '../controler/router.js';
 import { emailFirebase } from '../model/registroEmail.js';
-
 
 const components = {
   home: Home,
@@ -14,12 +12,10 @@ const components = {
 const signUpArguments = {
   init: () => {
     const form = document.getElementById('formSignUp');
-
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const email = form.inputEmail1.value;
       const password = form.inputPassword1.value;
-
       emailFirebase.toSignUp(email, password);
     });
   },
@@ -28,7 +24,6 @@ const signUpArguments = {
 const loggeoArguments = {
   init: () => {
     const form = document.getElementById('formLogIn');
-
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const emailValues = {
@@ -36,9 +31,7 @@ const loggeoArguments = {
         password: form.inputPassword.value,
       };
       form.reset();
-
-      const prueba = emailFirebase.logIn(form.inputEmail.value, form.inputPassword.value);
-      console.log(prueba);
+      emailFirebase.logIn(emailValues.email, emailValues.password);
     });
   },
 };
@@ -52,4 +45,4 @@ export { components, loggeoArguments, signUpArguments };
   })
   .catch((data) => {
    //redirect a login
-  });*/
+  }); */
