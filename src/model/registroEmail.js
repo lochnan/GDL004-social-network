@@ -26,7 +26,7 @@ export const emailFirebase = {
       // Handle Errors here.
       let errorCode = error.code;
       let errorMessage = error.message;
-      // alert("Te equivocaste")
+      alert("Te equivocaste")
       console.trace(error);
       alert(error.message);
     });
@@ -37,7 +37,13 @@ export const emailFirebase = {
     firebase.auth().signInWithEmailAndPassword(emailL, passwordL).catch((error) => {
       let errorCode = error.code;
       let errorMessage = error.message;
-      alert(errorCode);
+      if (errorCode === 'auth/wrong-password') {
+        alert('Upss contraseña incorrecta');
+      } else if (errorCode === 'auth/invalid-email') {
+        alert ('correo inválido');
+    } else {
+        alert(errorMessage);
+      }
     })
   }
 };

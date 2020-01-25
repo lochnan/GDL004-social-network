@@ -16,6 +16,7 @@ const signUpArguments = {
       e.preventDefault();
       const email = form.inputEmail1.value;
       const password = form.inputPassword1.value;
+      form.reset();
       emailFirebase.toSignUp(email, password);
     });
   },
