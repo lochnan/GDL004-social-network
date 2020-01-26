@@ -1,10 +1,19 @@
-import { components, loggeoArguments, signUpArguments } from '../views/index.js';
+import Home from '../views/home.js';
+import LogIn from '../views/logIn.js';
+import Different from '../views/page404.js';
+
+const components = {
+  home: Home,
+  logIn: LogIn,
+  different: Different,
+};
 
 export const controlador = {
-  init: () => {
-    loggeoArguments.init();
-    signUpArguments.init();
-  },
+// El init de loggeoArguments es un método que creamos en index.js y que contiene la función que recibe los argumentos de login y de signup 
+  //init: () => {
+  //   loggeoArguments.init();
+  //   signUpArguments.init();
+  // },
 
   changeView: (hash) => {
     const container = document.getElementById('container');
@@ -15,12 +24,12 @@ export const controlador = {
       case '#':
       case '#/logIn':
         container.appendChild(components.logIn());
-        controlador.init();
         break;
       case '#/home':
-        return container.appendChild(components.home());
+        container.appendChild(components.home());
+        break;
       default:
-        return container.appendChild(components.different());
+        container.appendChild(components.different());
     }
   },
 };

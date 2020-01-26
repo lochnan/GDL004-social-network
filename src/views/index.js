@@ -1,13 +1,6 @@
-import Home from './home.js';
-import LogIn from './logIn.js';
-import Different from './page404.js';
 import { emailFirebase } from '../model/registroEmail.js';
+import { controlador } from '../controler/router.js';
 
-const components = {
-  home: Home,
-  logIn: LogIn,
-  different: Different,
-};
 
 const signUpArguments = {
   init: () => {
@@ -17,7 +10,15 @@ const signUpArguments = {
       const email = form.inputEmail1.value;
       const password = form.inputPassword1.value;
       form.reset();
-      emailFirebase.toSignUp(email, password);
+      // Creando una constante a la que se le asigna el return quie viene de registroEmail.js que está en signUP y que es la promesa.
+      const promisesSigUp = emailFirebase.toSignUp(email, password);
+      // Construyendo el then (caso exitoso)
+      promisesSigUp.then(() => {
+        alert('registro exitoso');
+        controlador.changeView('#/home');
+
+      })
+
     });
   },
 };
@@ -37,7 +38,7 @@ const loggeoArguments = {
   },
 };
 
-export { components, loggeoArguments, signUpArguments };
+export { loggeoArguments, signUpArguments };
 
 /* frank
   registroEmail.LogIn(form.inputEmail.value, emailValues.password)
