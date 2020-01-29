@@ -30,18 +30,6 @@ export const emailFirebase = {
   // FUNCTION that makes LOGIN once the user has already signup with the email.
   logIn: (email, password) => {
     const promiseLogIn = firebase.auth().signInWithEmailAndPassword(email, password);
-      /*.catch((error) => {
-        let errorCode = error.code;
-        let errorMessage = error.message;
-        if (errorCode === 'auth/wrong-password') {
-          alert('Upss contraseña incorrecta');
-        } else if (errorCode === 'auth/invalid-email') {
-          alert('correo inválido');
-        } else {
-          alert(errorMessage);
-        }
-      });
-      */
     return promiseLogIn;
   },
 };
@@ -55,17 +43,3 @@ export function toSignOut() {
   });
 }
 */
-
-// logIn: (emailL, passwordL) => {
-//   firebase.auth().signInWithEmailAndPassword(emailL, passwordL)
-//     .catch((error) => {
-//       let errorCode = error.code;
-//       let errorMessage = error.message;
-//       if (errorCode === 'auth/wrong-password') {
-//         alert('Upss contraseña incorrecta');
-//       } else if (errorCode === 'auth/invalid-email') {
-//         alert('correo inválido');
-//       } else {
-//         alert(errorMessage);
-//       }
-//     })
