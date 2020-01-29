@@ -3,7 +3,6 @@ export default () => {
   divElement.setAttribute('id', 'divElement');
   divElement.setAttribute('class', 'color');
 
-
   // Creando div para la imagen del logo
   const logo = document.createElement('div');
   logo.setAttribute('class', 'logo');
@@ -24,6 +23,7 @@ export default () => {
   bodyLogIn.appendChild(buttonGoogle);
   buttonGoogle.appendChild(buttonG);
 
+  /*
   // REGISTRARSE O SIGNUP CON CORREO
   const formSignUp = document.createElement('form');
   formSignUp.setAttribute('id', 'formSignUp');
@@ -48,7 +48,7 @@ export default () => {
   button1.setAttribute('value', 'Nuevo Registro');
   formSignUp.appendChild(button1);
 
-
+  */
   // INICIAR SESIÓN CON CORREO
   const formLogIn = document.createElement('form');
   formLogIn.setAttribute('id', 'formLogIn');
@@ -72,6 +72,16 @@ export default () => {
   button.setAttribute('type', 'submit');
   button.setAttribute('value', 'Iniciar sesión');
   formLogIn.appendChild(button);
+
+  const link = document.createElement('div');
+  link.setAttribute('id', 'link');
+  const aLink = document.createElement('a');
+  link.appendChild(aLink);
+  aLink.setAttribute('href', '#/signUp');
+  const template2 = `<span> ${'¿Aun no tienes cuenta en chocolat? REGÍSTRATE'} </span>`;
+  aLink.innerHTML = template2;
+  divElement.appendChild(link);
+
 
   return divElement;
 };
