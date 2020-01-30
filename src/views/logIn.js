@@ -45,18 +45,14 @@ export default () => {
   inputPassword.setAttribute('placeholder', 'Escribe tu contraseña');
   // Creando el botón que hará el inición se sesión con la función de firebase
   const button = document.createElement('button');
-  
-  //button.setAttribute('type', 'submit');
+
+  // button.setAttribute('type', 'submit');
   button.innerHTML = 'Iniciar sesión';
   button.setAttribute('value', 'Iniciar sesión');
-  formLogIn.addEventListener('submit', (e) => {
-    e.preventDefault();
-    loggeoArguments.init();
-    window.location.hash = '#/home';
-  });
   formLogIn.appendChild(button);
+  formLogIn.addEventListener('submit', loggeoArguments.init);
 
-  // DIV donde está el link 
+  // DIV donde está el link
   const link = document.createElement('div');
   link.setAttribute('id', 'link');
   const aLink = document.createElement('a');

@@ -23,18 +23,14 @@ export default () => {
   inputPassword1.setAttribute('id', 'inputPassword1');
   inputPassword1.setAttribute('name', 'inputPassword1');
   inputPassword1.setAttribute('placeholder', 'Escribe tu contraseña');
+
   // Creando el botón que hará en registro del correo con la función de firebase
   const button1 = document.createElement('button');
-
   // button1.setAttribute('type', 'submit');
   button1.innerHTML = 'Regístrate';
   button1.setAttribute('value', 'Regístrate');
-  formSignUp.addEventListener('submit', (e) => {
-    e.preventDefault();
-    signUpArguments.init();
-    // window.location.hash = '#/login';
-  });
   formSignUp.appendChild(button1);
+  formSignUp.addEventListener('submit', signUpArguments.init);
 
   return divElement;
 };
